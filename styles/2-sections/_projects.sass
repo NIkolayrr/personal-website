@@ -1,0 +1,79 @@
+#projects
+  padding: 40px
+  position: relative
+  +display(flex)
+  +flex-wrap(wrap)
+  +align-items(flex-start)
+  +align-content(flex-start)
+
+  .overlay
+    display: none
+
+  article
+    background: lighten($background,2%)
+    position: relative
+    border-radius: 10px
+    max-width: 500px
+    padding: 20px
+    margin: 10px
+    +transition(background .5s ease)
+    //&:hover
+    //  background: darken($darkerBlue,30%)
+
+    .overlay
+      content: ''
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      position: absolute
+      background: white
+      #innerOverlay
+        +centerer(true,true)
+        .btn
+          background: white
+
+    .btn
+      background: none
+      text-decoration: none
+      cursor: pointer
+      color: white
+      padding: 10px
+      width: 100%
+      border-radius: 5px
+      border: 1px solid white
+      overflow: hidden
+      position: relative
+      z-index: 2
+      +transition(all .5s ease)
+      &:hover
+        color: white
+        z-index: 35
+      &:before
+        content: ''
+        position: absolute
+        z-index: 0
+        background: red
+        height: 250px
+        width: 1000px
+        border-radius: 50%
+        transition: all .3s linear
+        top: 100%
+        left: 100%
+      &:hover:before
+        top: -50px
+        left: -100px
+    ul
+      display: none
+      margin-top: 60px
+      li
+        list-style: none
+        h4
+          color: white
+          text-transform: uppercase
+          border-bottom: 1px solid white
+        p
+          color: #eee
+          font-size: .9em
+    img
+      max-width: 400px

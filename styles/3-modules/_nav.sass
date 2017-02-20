@@ -1,0 +1,169 @@
+#mainHeader
+  #mainNav
+    ul
+      list-style: none
+      li
+        a
+          text-decoration: none
+          position: relative
+          color: $links
+          &:before
+            content: ''
+            display: block
+            position: absolute
+            left: 0
+            bottom: -2px
+            height: 2px
+            background: $links
+            width: 0
+            +transition(width .3s)
+          &:hover:before
+            width: 100%
+
+  @media screen and (max-width: $phone)
+    +justify-content(none)
+    background: none
+    #mainNav
+      background: #110048
+      margin-bottom: 20px
+      padding: 10px
+      ul
+        li
+          padding: 10px
+          display: none
+          a
+            display: block
+            color: $links
+            font-size: 1.5em
+      #toggle
+        position: relative
+        cursor: pointer
+        background: $background
+        padding: 10px
+        margin-top: 15px
+        +size(40px)
+        div
+          height: 2px
+          width: 20px
+          margin-bottom: 5px
+          background: white
+          @include transition(all .2s linear)
+
+  @media screen and (min-width: $phone+1) and (max-width: $tablet)
+    background: $menu-bg
+    +display(flex)
+    +justify-content(center)
+    #mainNav
+      ul
+        margin: 0
+        li
+          display: inline-block
+          a
+            color: $background
+            display: block
+            +transition(all .3s ease)
+            padding: 15px
+            &:hover
+              background: $background
+              color: $links
+
+  @media screen and (min-width: $desktop)
+    display: flex !important
+    min-height: 100vh
+    +span-columns(1.5)
+    position: fixed
+    align-items: center
+    background: $menu-bg
+    #mainNav
+      ul
+        li
+          margin-bottom: 20px
+          a
+            color: $background
+            &:before
+              background: $background
+
+//#main
+//  .toggle
+//    display: none
+//  ul
+//    margin: 0
+//    li
+//      list-style: none
+//      a
+//        color: $links
+//        text-decoration: none
+//        position: relative
+//
+//        &:before
+//          content: ''
+//          display: block
+//          position: absolute
+//          left: 0
+//          bottom: -2px
+//          height: 2px
+//          background: $links
+//          width: 0
+//          +transition(width .3s)
+//
+//        &:hover:before
+//          width: 100%
+//  @media screen and (min-width: $desktop)
+//    +span-columns(1.5)
+//    background: red
+//    display: flex
+//    flex-direction: column
+//    min-height: 100vh
+//    ul
+//      li
+//        margin-top: 20px
+//        a
+//          color: $background
+//          &:before
+//            background: $background
+//
+//  @media screen and (max-width: $tablet)
+//    @include position(relative, 0)
+//    background: $background
+//    padding: 10px
+//    width: 100%
+//    ul
+//      li
+//        display: inline-block
+//        margin: 0 0 0 1em
+//  @media screen and (max-width: $phone)
+//    background: #110048
+//    margin-bottom: 20px
+//    padding: 10px
+//    #toggle
+//      position: relative
+//      cursor: pointer
+//      background: $background
+//      padding: 10px
+//      +size(40px)
+//      div
+//        height: 2px
+//        width: 20px
+//        margin-bottom: 5px
+//        background: white
+//        @include transition(all .3s linear)
+//    ul
+//      li
+//        padding: 10px
+//        display: none
+//        a
+//          display: block
+//          color: $links
+//          font-size: 1.5em
+
+.clickedMenu
+  div
+    margin-top: 8px
+    height: 10px
+    position: absolute
+    &:nth-child(2)
+      display: none
+    &:nth-child(1)
+      +transform(rotate(-45deg))
+    &:nth-child(3)
+      +transform(rotate(45deg))

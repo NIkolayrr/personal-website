@@ -1,0 +1,138 @@
+#about
+  width: 100%
+  header
+    position: relative
+    height: 200px
+    h1
+      margin: 0
+      text-align: center
+      padding-top: 50px
+
+  svg
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 10vw
+    polygon
+      fill: $background
+
+  #aboutMe
+    +clearfix
+    margin-bottom: 20px
+    header
+      background: transparentize(white,.4)
+      h1
+        color: $background
+        text-shadow: rgba(255,255,255,0.8) 0 1px 1px
+    article
+      padding-bottom: 20px
+      max-width: 700px
+      margin: 0 auto
+      #img
+        +size(150px)
+        position: relative
+        border: 10px solid transparentize($background,.5)
+        float: left
+        margin-right: 20px
+        background: white url(http://img.ffffound.com/static-data/assets/6/0286e623a98bcd4d719fd2d682aab35fc98bc8f3_m.jpg) no-repeat
+        background-size: contain
+        border-radius: 50%
+      p
+        font-weight: 200
+        font-size: 1.3rem
+        letter-spacing: 1px
+        &:first-letter
+          font-size: 2rem
+        &:first-line
+          margin-bottom: 3px
+
+  #contact
+    margin-bottom: 20px
+    header
+      background: transparentize(white,.4)
+      h1
+        color: $background
+        text-shadow: rgba(255,255,255,0.5) 0 1px 1px
+    article
+      max-width: 450px
+      margin: 0 auto
+      p
+        margin-bottom: 20px
+      #contactForm
+        padding: 20px 10px 10px 10px
+        border-radius: 10px
+        max-width: 450px
+        background: transparentize(white,.9)
+        input,textarea
+          width: 75%
+          margin: 15px auto
+          padding: 5px
+          height: 40px
+          display: block
+          &:focus
+            border: 2px solid $darkerBlue
+        textarea
+          height: 100px
+        input[type=submit]
+          box-shadow: none
+          border: none
+          background: $darkerBlue
+          color: white
+
+@media screen and (max-width: $phone)
+  img,#img
+    margin: 0 auto !important
+    float: none !important
+  article
+    width: 100%
+    padding: 15px
+    p
+      text-align: left
+  #contact
+    position: relative
+    article
+      position: relative
+      padding-top: 50px
+
+  //    svg
+  //      position: absolute
+  //      bottom: 0
+  //      left: 0
+  //      width: 100%
+  //      height: 10vw
+  //      polygon
+  //        fill: $background
+  //article
+  //  background: $background
+  //  margin: 0 auto
+  //  position: relative
+  //  max-width: 600px
+  //
+  //  img
+  //    max-width: 250px
+  //    float: left
+  //    margin-right: 15px
+  //  p
+  //    color: white
+  //    letter-spacing: 2px
+  //    &:first-letter
+  //      font-size: 2em
+  //
+  //@media screen and (max-width: $phone)
+  //  header
+  //    height: 200px
+  //    margin-bottom: 10px
+  //    h1
+  //      padding-top: 50px
+  //    svg
+  //      width: 100%
+  //      bottom: -1px
+  //  article
+  //    text-align: center
+  //    img
+  //      width: 100px
+  //      float: none
+  //    p
+  //      padding: 20px
+  //      text-align: left
