@@ -35,7 +35,7 @@ function projects() {
             $ul.hide();
             $this.text('More');
         } else {
-            $ul.show();
+            $ul.fadeIn();
             $this.text('Less');
         }
     });
@@ -64,14 +64,14 @@ function animateAbout() {
     let $about = $('#about');
     let $head = $about.find('h1');
     let $sectionHeaders = $about.find('header');
-    let $email = $('#contact').find('a');
     let $pAbout = $('#aboutMe article');
+    let $contact = $('#contact');
     let tl2 = new TimelineLite();
 
     tl2.from($sectionHeaders,.3,{autoAlpha: 0, ease: Power1.easeIn, delay: .2})
         .from($head, .3, {autoAlpha: 0, y: -50, delay: .2, ease: Power4.easeIn})
         .from($pAbout, .3, {autoAlpha: 0, x: 100, ease: Power1.easeIn})
-        .from($email,.3,{autoAlpha: 0,x: 50,y: 50, ease: Power1.easeOut});
+        .from($contact,.3,{autoAlpha: 0, ease: Power2.easeIn});
 }
 
 function animateHome() {

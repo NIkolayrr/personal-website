@@ -60,7 +60,11 @@
       max-width: 450px
       margin: 0 auto
       p
-        margin-bottom: 20px
+        padding: 10px
+        margin: 0
+        &:last-of-type
+          line-height: 1.2em
+          margin-bottom: 20px
       #contactForm
         padding: 20px 10px 10px 10px
         border-radius: 10px
@@ -74,6 +78,7 @@
           display: block
           &:focus
             border: 2px solid $darkerBlue
+
         textarea
           height: 100px
         input[type=submit]

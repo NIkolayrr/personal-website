@@ -5,6 +5,7 @@
   padding: 20px
   +animation(appear .75s linear)
   color: white
+
   h1
     font-size: 2.5em
   p
@@ -14,9 +15,10 @@
     margin-left: -35px
     li
       display: inline-block
-      svg
-        fill: white
-        width: 25px
+      margin-right: 2px
+      img
+        +size(25px)
+
 @media screen and (min-width: $phone)
   #home
     &:before,&:after
