@@ -26,7 +26,8 @@
 
 function projects() {
     let $btn = $('#projects').find('.btn');
-    $btn.on('click', function () {
+    $btn.on('click', function (event) {
+        event.preventDefault();
         let $this = $(this);
         let $ul = $this.next();
 

@@ -34,32 +34,31 @@
           background: white
 
     .btn
-      background: none
       text-decoration: none
       cursor: pointer
       color: white
+      text-align: center
       padding: 10px
-      width: 100%
+      display: block
+      overflow: hidden
       border-radius: 5px
       border: 1px solid white
-      overflow: hidden
       position: relative
-      z-index: 2
+      z-index: 1
       +transition(all .5s ease)
       &:hover
-        color: white
-        z-index: 35
+        color: $background
       &:before
         content: ''
         position: absolute
-        z-index: 0
-        background: red
+        z-index: -1
+        background: white
         height: 250px
         width: 1000px
         border-radius: 50%
         transition: all .3s linear
         top: 100%
-        left: 100%
+        left: 50%
       &:hover:before
         top: -50px
         left: -100px
