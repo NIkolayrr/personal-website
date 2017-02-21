@@ -681,12 +681,15 @@ body {
         height: 150px;
         width: 150px;
         position: relative;
-        border: 10px solid rgba(8, 0, 33, 0.5);
         float: left;
         margin-right: 20px;
-        background: white url(http://img.ffffound.com/static-data/assets/6/0286e623a98bcd4d719fd2d682aab35fc98bc8f3_m.jpg) no-repeat;
-        background-size: contain;
-        border-radius: 50%; }
+        background: white url("../img/thumb-me.jpg") no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 5px solid white;
+        -webkit-filter: grayscale(0.3);
+        filter: grayscale(0.3); }
       #about #aboutMe article p {
         font-weight: 200;
         font-size: 1.3rem;
@@ -826,14 +829,15 @@ body {
         height: 250px;
         width: 1000px;
         border-radius: 50%;
-        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
         top: 100%;
         left: 50%; }
       #projects article .btn:hover:before {
         top: -50px;
         left: -100px; }
     #projects article ul {
-      display: none;
       margin-top: 60px; }
       #projects article ul li {
         list-style: none; }

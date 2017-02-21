@@ -17,8 +17,6 @@
     padding: 20px
     margin: 10px
     +transition(background .5s ease)
-    //&:hover
-    //  background: darken($darkerBlue,30%)
 
     .overlay
       content: ''
@@ -56,14 +54,13 @@
         height: 250px
         width: 1000px
         border-radius: 50%
-        transition: all .3s linear
+        +transition(all .3s ease)
         top: 100%
         left: 50%
       &:hover:before
         top: -50px
         left: -100px
     ul
-      display: none
       margin-top: 60px
       li
         list-style: none

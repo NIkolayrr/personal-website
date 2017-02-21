@@ -32,12 +32,14 @@
       #img
         +size(150px)
         position: relative
-        border: 10px solid transparentize($background,.5)
         float: left
         margin-right: 20px
-        background: white url(http://img.ffffound.com/static-data/assets/6/0286e623a98bcd4d719fd2d682aab35fc98bc8f3_m.jpg) no-repeat
-        background-size: contain
+        background: white url("../img/thumb-me.jpg") no-repeat
+        background-size: cover
+        overflow: hidden
         border-radius: 50%
+        border: 5px solid white
+        +filter(grayscale(.3))
       p
         font-weight: 200
         font-size: 1.3rem
