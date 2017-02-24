@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600");
 html {
   box-sizing: border-box; }
 
@@ -377,7 +378,7 @@ h1, h2, h3, p, a {
 
 body {
   background: #080021;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.1em; }
   body #loadingDiv {
     position: absolute;
@@ -460,6 +461,9 @@ body {
     margin-top: 0; } }
 #mainHeader #mainNav ul {
   list-style: none; }
+  #mainHeader #mainNav ul li svg {
+    height: 25px;
+    width: 25px; }
   #mainHeader #mainNav ul li a {
     text-decoration: none;
     position: relative;
@@ -497,6 +501,8 @@ body {
       #mainHeader #mainNav ul li {
         padding: 10px;
         display: none; }
+        #mainHeader #mainNav ul li svg {
+          fill: white; }
         #mainHeader #mainNav ul li a {
           display: block;
           color: white;
@@ -537,9 +543,11 @@ body {
     justify-content: center;
     -ms-flex-pack: center; }
     #mainHeader #mainNav ul {
-      margin: 0; }
+      margin: 0;
+      padding-left: 10px; }
       #mainHeader #mainNav ul li {
-        display: inline-block; }
+        display: inline-block;
+        text-align: center; }
         #mainHeader #mainNav ul li a {
           color: #080021;
           display: block;
@@ -549,7 +557,9 @@ body {
           padding: 15px; }
           #mainHeader #mainNav ul li a:hover {
             background: #080021;
-            color: white; } }
+            color: white; }
+            #mainHeader #mainNav ul li a:hover svg {
+              fill: white; } }
 @media screen and (min-width: 800px) {
   #mainHeader {
     display: flex !important;
@@ -563,12 +573,20 @@ body {
     background: white; }
     #mainHeader:last-child {
       margin-right: 0; }
-    #mainHeader #mainNav ul li {
-      margin-bottom: 20px; }
-      #mainHeader #mainNav ul li a {
-        color: #080021; }
-        #mainHeader #mainNav ul li a:before {
-          background: #080021; } }
+    #mainHeader #mainNav ul {
+      padding-left: 20px; }
+      #mainHeader #mainNav ul li {
+        margin-bottom: 30px; }
+        #mainHeader #mainNav ul li svg {
+          height: 25px;
+          width: 25px;
+          margin-right: 5px; }
+        #mainHeader #mainNav ul li a {
+          color: #080021;
+          font-size: 1.2em;
+          line-height: 25px; }
+          #mainHeader #mainNav ul li a:before {
+            background: #080021; } }
 
 .clickedMenu div {
   margin-top: 8px;
@@ -650,11 +668,14 @@ body {
   width: 100%; }
   #about header {
     position: relative;
-    height: 200px; }
+    height: 200px;
+    font-weight: 600;
+    border-top: 3px solid #4294f0; }
     #about header h1 {
       margin: 0;
       text-align: center;
-      padding-top: 50px; }
+      padding-top: 50px;
+      text-shadow: 2px 2px 1px #ccc; }
   #about svg {
     position: absolute;
     bottom: 0;
@@ -670,10 +691,9 @@ body {
       content: "";
       display: block; }
     #about #aboutMe header {
-      background: rgba(255, 255, 255, 0.6); }
+      background: white; }
       #about #aboutMe header h1 {
-        color: #080021;
-        text-shadow: rgba(255, 255, 255, 0.8) 0 1px 1px; }
+        color: #080021; }
     #about #aboutMe article {
       padding-bottom: 20px;
       max-width: 700px;
@@ -692,7 +712,6 @@ body {
         -webkit-filter: grayscale(0.3);
         filter: grayscale(0.3); }
       #about #aboutMe article p {
-        font-weight: 200;
         font-size: 1.3rem;
         letter-spacing: 1px; }
         #about #aboutMe article p:first-letter {
@@ -702,22 +721,21 @@ body {
   #about #contact {
     margin-bottom: 20px; }
     #about #contact header {
-      background: rgba(255, 255, 255, 0.6); }
+      background: white; }
       #about #contact header h1 {
-        color: #080021;
-        text-shadow: rgba(255, 255, 255, 0.5) 0 1px 1px; }
+        color: #080021; }
     #about #contact article {
       max-width: 450px;
       margin: 0 auto; }
       #about #contact article p {
         padding: 10px;
-        margin: 0; }
+        margin: 0;
+        font-size: 1.2em; }
         #about #contact article p:last-of-type {
           line-height: 1.2em;
           margin-bottom: 20px; }
       #about #contact article #contactForm {
         padding: 20px 10px 10px 10px;
-        border-radius: 10px;
         max-width: 450px;
         background: rgba(255, 255, 255, 0.1); }
         #about #contact article #contactForm input, #about #contact article #contactForm textarea {
@@ -753,7 +771,6 @@ body {
       position: relative;
       padding-top: 50px; } }
 #projects {
-  padding: 40px;
   position: relative;
   display: -webkit-box;
   display: -moz-box;
@@ -782,6 +799,9 @@ body {
   -moz-align-content: flex-start;
   align-content: flex-start;
   -ms-flex-line-pack: start; }
+  @media screen and (min-width: 800px) {
+    #projects {
+      padding: 40px; } }
   #projects .overlay {
     display: none; }
   #projects article {
@@ -853,7 +873,5 @@ body {
             background: url("../includes/icons/earth.svg") no-repeat; }
           #projects article ul li .project-links .btn-code {
             background: url("../includes/icons/github.svg") no-repeat; }
-    #projects article img {
-      max-width: 400px; }
 
 /*# sourceMappingURL=main.css.map */
