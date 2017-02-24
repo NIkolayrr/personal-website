@@ -3,11 +3,13 @@
   header
     position: relative
     height: 200px
+    font-weight: 600
+    border-top: 3px solid #4294f0
     h1
       margin: 0
       text-align: center
       padding-top: 50px
-
+      text-shadow: 2px 2px 1px #ccc
   svg
     position: absolute
     bottom: 0
@@ -21,10 +23,9 @@
     +clearfix
     margin-bottom: 20px
     header
-      background: transparentize(white,.4)
+      background: white
       h1
         color: $background
-        text-shadow: rgba(255,255,255,0.8) 0 1px 1px
     article
       padding-bottom: 20px
       max-width: 700px
@@ -41,7 +42,6 @@
         border: 5px solid white
         +filter(grayscale(.3))
       p
-        font-weight: 200
         font-size: 1.3rem
         letter-spacing: 1px
         &:first-letter
@@ -52,25 +52,24 @@
   #contact
     margin-bottom: 20px
     header
-      background: transparentize(white,.4)
+      background: white
       h1
         color: $background
-        text-shadow: rgba(255,255,255,0.5) 0 1px 1px
     article
       max-width: 450px
       margin: 0 auto
       p
         padding: 10px
         margin: 0
+        font-size: 1.2em
         &:last-of-type
           line-height: 1.2em
           margin-bottom: 20px
       #contactForm
         padding: 20px 10px 10px 10px
-        border-radius: 10px
         max-width: 450px
-        background: transparentize(white,.9)
-        input,textarea
+        background: transparentize(white, .9)
+        input, textarea
           width: 75%
           margin: 15px auto
           padding: 5px
@@ -88,7 +87,7 @@
           color: white
 
 @media screen and (max-width: $phone)
-  img,#img
+  img, #img
     margin: 0 auto !important
     float: none !important
   article
@@ -102,44 +101,44 @@
       position: relative
       padding-top: 50px
 
-  //    svg
-  //      position: absolute
-  //      bottom: 0
-  //      left: 0
-  //      width: 100%
-  //      height: 10vw
-  //      polygon
-  //        fill: $background
-  //article
-  //  background: $background
-  //  margin: 0 auto
-  //  position: relative
-  //  max-width: 600px
-  //
-  //  img
-  //    max-width: 250px
-  //    float: left
-  //    margin-right: 15px
-  //  p
-  //    color: white
-  //    letter-spacing: 2px
-  //    &:first-letter
-  //      font-size: 2em
-  //
-  //@media screen and (max-width: $phone)
-  //  header
-  //    height: 200px
-  //    margin-bottom: 10px
-  //    h1
-  //      padding-top: 50px
-  //    svg
-  //      width: 100%
-  //      bottom: -1px
-  //  article
-  //    text-align: center
-  //    img
-  //      width: 100px
-  //      float: none
-  //    p
-  //      padding: 20px
-  //      text-align: left
+//    svg
+//      position: absolute
+//      bottom: 0
+//      left: 0
+//      width: 100%
+//      height: 10vw
+//      polygon
+//        fill: $background
+//article
+//  background: $background
+//  margin: 0 auto
+//  position: relative
+//  max-width: 600px
+//
+//  img
+//    max-width: 250px
+//    float: left
+//    margin-right: 15px
+//  p
+//    color: white
+//    letter-spacing: 2px
+//    &:first-letter
+//      font-size: 2em
+//
+//@media screen and (max-width: $phone)
+//  header
+//    height: 200px
+//    margin-bottom: 10px
+//    h1
+//      padding-top: 50px
+//    svg
+//      width: 100%
+//      bottom: -1px
+//  article
+//    text-align: center
+//    img
+//      width: 100px
+//      float: none
+//    p
+//      padding: 20px
+//      text-align: left
