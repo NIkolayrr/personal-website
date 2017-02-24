@@ -3,6 +3,8 @@
     ul
       list-style: none
       li
+        svg
+          +size(25px)
         a
           text-decoration: none
           position: relative
@@ -31,6 +33,8 @@
         li
           padding: 10px
           display: none
+          svg
+            fill: white
           a
             display: block
             color: $links
@@ -56,8 +60,10 @@
     #mainNav
       ul
         margin: 0
+        padding-left: 10px
         li
           display: inline-block
+          text-align: center
           a
             color: $background
             display: block
@@ -66,6 +72,8 @@
             &:hover
               background: $background
               color: $links
+              svg
+                fill: white
 
   @media screen and (min-width: $desktop)
     display: flex !important
@@ -76,85 +84,18 @@
     background: $menu-bg
     #mainNav
       ul
+        padding-left: 20px
         li
-          margin-bottom: 20px
+          margin-bottom: 30px
+          svg
+            +size(25px)
+            margin-right: 5px
           a
             color: $background
+            font-size: 1.2em
+            line-height: 25px
             &:before
               background: $background
-
-//#main
-//  .toggle
-//    display: none
-//  ul
-//    margin: 0
-//    li
-//      list-style: none
-//      a
-//        color: $links
-//        text-decoration: none
-//        position: relative
-//
-//        &:before
-//          content: ''
-//          display: block
-//          position: absolute
-//          left: 0
-//          bottom: -2px
-//          height: 2px
-//          background: $links
-//          width: 0
-//          +transition(width .3s)
-//
-//        &:hover:before
-//          width: 100%
-//  @media screen and (min-width: $desktop)
-//    +span-columns(1.5)
-//    background: red
-//    display: flex
-//    flex-direction: column
-//    min-height: 100vh
-//    ul
-//      li
-//        margin-top: 20px
-//        a
-//          color: $background
-//          &:before
-//            background: $background
-//
-//  @media screen and (max-width: $tablet)
-//    @include position(relative, 0)
-//    background: $background
-//    padding: 10px
-//    width: 100%
-//    ul
-//      li
-//        display: inline-block
-//        margin: 0 0 0 1em
-//  @media screen and (max-width: $phone)
-//    background: #110048
-//    margin-bottom: 20px
-//    padding: 10px
-//    #toggle
-//      position: relative
-//      cursor: pointer
-//      background: $background
-//      padding: 10px
-//      +size(40px)
-//      div
-//        height: 2px
-//        width: 20px
-//        margin-bottom: 5px
-//        background: white
-//        @include transition(all .3s linear)
-//    ul
-//      li
-//        padding: 10px
-//        display: none
-//        a
-//          display: block
-//          color: $links
-//          font-size: 1.5em
 
 .clickedMenu
   div
