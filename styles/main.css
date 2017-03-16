@@ -663,7 +663,9 @@ body {
     transform: translate(0, 0);
     top: 0;
     left: 0;
-    width: 100%; } }
+    width: 100%; }
+    #home h1 {
+      font-size: 2em; } }
 #about {
   width: 100%; }
   #about header {
@@ -804,6 +806,14 @@ body {
       padding: 40px; } }
   #projects .overlay {
     display: none; }
+  #projects #carWebsite {
+    -webkit-box-ordinal-group: 5;
+    -moz-box-ordinal-group: 5;
+    box-ordinal-group: 5;
+    -webkit-order: 5;
+    -moz-order: 5;
+    order: 5;
+    -ms-flex-order: 5; }
   #projects article {
     background: #0a002b;
     position: relative;
@@ -860,7 +870,13 @@ body {
           border-bottom: 1px solid white; }
         #projects article ul li p {
           color: #eee;
-          font-size: 0.9em; }
+          font-size: 1em; }
+        #projects article ul li a {
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
+          #projects article ul li a:hover {
+            opacity: 0.6; }
         #projects article ul li .project-links {
           text-align: center; }
           #projects article ul li .project-links .btn-code, #projects article ul li .project-links .btn-visit {
