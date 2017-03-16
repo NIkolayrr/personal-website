@@ -25,7 +25,8 @@
 })();
 
 function projects() {
-    let $btn = $('#projects').find('.btn');
+    let $projects = $('#projects');
+    let $btn = $projects.find('.btn');
     $btn.on('click', function (event) {
         event.preventDefault();
         let $this = $(this);
@@ -40,19 +41,10 @@ function projects() {
         }
     });
 
-    let $article = $('#projects').find('article');
-    $article.hover(
-        function () {
-            let $this = $(this);
-            let $overlay = $(this).find('.overlay');
-            TweenLite.to($overlay, .3, {autoAlpha:1,left: "300px"});
-        },
-        function () {
-            let $this = $(this);
-            let $overlay = $(this).find('.overlay');
-            $overlay.slideUp();
-        }
-    )
+    let $article = $projects.find('article');
+    let tlProjects = new TimelineLite();
+
+    tlProjects.from($article,.5,{autoAlpha: 0, ease: Power1.easeIn, delay: .2});
 }
 
 function animateMenu() {
