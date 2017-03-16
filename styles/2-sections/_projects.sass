@@ -10,6 +10,9 @@
   .overlay
     display: none
 
+  #carWebsite
+    +order(5)
+
   article
     background: lighten($background,2%)
     position: relative
@@ -18,7 +21,6 @@
     padding: 20px
     margin: 10px
     +transition(background .5s ease)
-
     .btn
       text-decoration: none
       cursor: pointer
@@ -62,7 +64,11 @@
           border-bottom: 1px solid white
         p
           color: #eee
-          font-size: .9em
+          font-size: 1em
+        a
+          +transition(all .5s ease)
+          &:hover
+            opacity: .6
         .project-links
           text-align: center
           .btn-code,.btn-visit
