@@ -13,14 +13,44 @@
   #carWebsite
     +order(5)
 
+  .links
+    +display(flex)
+    width: 100%
+    +align-items(center)
+    +justify-content(center)
+    color: white
+    ul
+      li
+        display: inline-block
+        margin-right: 20px
+        position: relative
+        a
+          text-decoration: none
+          padding: 5px
+          border-radius: 5px
+          border: 1px solid transparent
+          +transition(all .5s ease)
+          &:hover
+            border-color: rgba(255, 255, 255, .6)
+            background: rgba(255, 255, 255, .3)
+
+  @media screen and (max-width: $phone)
+    .links
+      +flex-wrap(wrap)
+      ul
+        li
+          display: block
+          margin-bottom: 10px
   article
-    background: lighten($background,2%)
+    background: lighten($background, 2%)
     position: relative
     border-radius: 10px
     max-width: 500px
     padding: 20px
     margin: 10px
     +transition(background .5s ease)
+    &:hover
+      background: lighten($background, 7%)
     .btn
       text-decoration: none
       cursor: pointer
@@ -71,7 +101,7 @@
             opacity: .6
         .project-links
           text-align: center
-          .btn-code,.btn-visit
+          .btn-code, .btn-visit
             text-indent: -9999px
             display: inline-block
             background-size: contain

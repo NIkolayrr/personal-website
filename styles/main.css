@@ -752,9 +752,14 @@ body {
           height: 100px; }
         #about #contact article #contactForm input[type=submit] {
           box-shadow: none;
-          border: none;
+          border: 2px solid transparent;
           background: #3E00FF;
-          color: white; }
+          color: white;
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
+          #about #contact article #contactForm input[type=submit]:hover {
+            border-color: white; }
 
 @media screen and (max-width: 400px) {
   img, #img {
@@ -814,6 +819,61 @@ body {
     -moz-order: 5;
     order: 5;
     -ms-flex-order: 5; }
+  #projects .links {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    color: white; }
+    #projects .links ul li {
+      display: inline-block;
+      margin-right: 20px;
+      position: relative; }
+      #projects .links ul li a {
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+        #projects .links ul li a:hover {
+          border-color: rgba(255, 255, 255, 0.6);
+          background: rgba(255, 255, 255, 0.3); }
+  @media screen and (max-width: 400px) {
+    #projects .links {
+      -webkit-box-lines: multiple;
+      -moz-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #projects .links ul li {
+        display: block;
+        margin-bottom: 10px; } }
   #projects article {
     background: #0a002b;
     position: relative;
@@ -824,6 +884,8 @@ body {
     -webkit-transition: background 0.5s ease;
     -moz-transition: background 0.5s ease;
     transition: background 0.5s ease; }
+    #projects article:hover {
+      background: #110045; }
     #projects article .btn {
       text-decoration: none;
       cursor: pointer;
