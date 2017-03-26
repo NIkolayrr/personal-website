@@ -82,9 +82,12 @@
           height: 100px
         input[type=submit]
           box-shadow: none
-          border: none
+          border: 2px solid transparent
           background: $darkerBlue
           color: white
+          +transition(all .5s ease)
+          &:hover
+            border-color: white
 
 @media screen and (max-width: $phone)
   img, #img
